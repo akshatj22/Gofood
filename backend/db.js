@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-const mongoURI = 'mongodb+srv://akshat:akshat@cluster0.qekzpdr.mongodb.net/gofoodmern?retryWrites=true&w=majority'
+const dotenv = require('dotenv')
+const mongoURI = process.env.DATABASE.replace('<password>',process.env.DATABASE_PWD)
 mongoose.set('strictQuery', false);
 const mongoDB = async () => {
 
